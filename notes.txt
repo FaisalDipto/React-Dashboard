@@ -1,0 +1,8 @@
+disable key validation
+- replace this function (node_modules/@syncfusion/ej2-base/src/validate-lic.js)
+LicenseValidator.prototype.validate with :
+LicenseValidator.prototype.validate = function () {
+        return this.isLicensed;
+    };
+
+delete .cache from node_modules before restarting server
