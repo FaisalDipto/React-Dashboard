@@ -50,23 +50,23 @@ const Navbar = () => {
   
   const { width } = useWindowSize();
   console.log("Width from Navbar",width);
-  // useEffect(() => {
-  //   const handleResize = () => setScreenSize(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => setScreenSize(window.innerWidth);
 
-  //   window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize);
 
-  //   handleResize();
+    handleResize();
 
-  //   return () => window.removeEventListener('resize', handleResize)
-  // }, []);
+    return () => window.removeEventListener('resize', handleResize)
+  }, []);
 
-  // useEffect(() => {
+  useEffect(() => {
     if(width <= 900) {
       setActiveMenu(false);
     } else {
       setActiveMenu(true);
     }
-  // }, [screenSize]);
+  }, [screenSize]);
 
   return (
     <div className='flex justify-between p-2 md:mx-6 relative'>
